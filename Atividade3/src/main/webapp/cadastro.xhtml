@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+  <title>Cadastro de Usuários</title>
+  <link rel="stylesheet" href="_css/main.css" />
+</h:head>
+<h:body>
+  <h1>Cadastro de Nome</h1>
+  <h:form>
+    <h:inputText value="#{pessoa.nome}" styleClass="input" />
+    <h:commandButton value="Cadastrar" action="#{pessoa.adicionar}" />
+  </h:form>
+
+  <h2>Nomes Cadastrados:</h2>
+  <ul>
+    <ui:repeat value="#{pessoa.nomes}" var="n">
+      <li>#{n}</li>
+    </ui:repeat>
+  </ul>
+</h:body>
+</html>
